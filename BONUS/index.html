@@ -31,12 +31,11 @@
                         <ul class="list-group list-group-flush">
                             <li
                             v-for="(todo, index) in todoList" 
-                            class="list-group-item d-flex justify-content-between"
-                            @click="changeDone(index)"
-                            >
+                            class="list-group-item d-flex justify-content-between">
                                 <p
                                 :class="{ 'text-decoration-line-through' : todo.done }"
                                 v-html="todo.text"
+                                @click="changeDone(index)"
                                 >
                                 </p>
                                 
