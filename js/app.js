@@ -24,12 +24,19 @@ const { createApp } = Vue
             text: 'Comprare il Gin',
             done: false,
             },
-        ]
+        ],
+        newTask: ''
       }
     },
     methods: {
         removeTask(taskIndex) {
             this.todoList.splice(taskIndex, 1)
+        },
+        addTask() {
+            this.todoList.push({
+                text: this.newTask,
+                done: false
+            })
         }
     }
     
