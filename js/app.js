@@ -5,22 +5,32 @@ const { createApp } = Vue
       return {
         todoList: [
             {
-            text: 'ciao',
+            text: 'Bere tanto',
             done: true,
             },
             {
-            text: 'ciao numero due',
+            text: 'Ricordarsi di bere tanto',
             done: false,
             },
             {
-            text: 'ciao numero tre',
+            text: 'Ricordarsi di ricordarsi di bere tanto',
             done: true,
             },
             {
-            text: 'ciao numero quattro',
+            text: 'Ricordarsi di bere acqua',
             done: false,
-            }
+            },
+            {
+            text: 'Comprare il Gin',
+            done: false,
+            },
         ]
       }
+    },
+    methods: {
+        removeTask(taskIndex) {
+            this.todoList.splice(taskIndex, 1)
+        }
     }
+    
   }).mount('#app')
