@@ -34,8 +34,8 @@
                             >
                                 <p
                                 :class="{ 'text-decoration-line-through' : todo.done }"
+                                v-html="todo.text"
                                 >
-                                    {{ todo.text }}
                                 </p>
                                 
                                 <button type="button" class="btn btn-secondary"
