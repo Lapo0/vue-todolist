@@ -25,7 +25,8 @@ const { createApp } = Vue
             done: false,
             },
         ],
-        newTask: ''
+        newTask: '',
+        selectedTask: null
       }
     },
     methods: {
@@ -38,6 +39,9 @@ const { createApp } = Vue
             done: false
         });
         this.newTask = '';
+        },
+        changeDone(taskIndex) {
+            this.todoList[taskIndex].done = !this.todoList[taskIndex].done;
         }
     }
     
