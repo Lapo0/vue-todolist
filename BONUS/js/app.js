@@ -26,7 +26,7 @@ const { createApp } = Vue
             },
         ],
         newTask: '',
-        selectedTask: null
+        selectedTask: null,
       }
     },
     methods: {
